@@ -5,14 +5,14 @@ RUN apt-get update
 RUN apt-get dist-upgrade -y
 
 # get needed packages
-RUN apt-get install -y nginx wget pip
+RUN apt-get install -y nginx wget python3-minimal python3-pip
 
 COPY default /etc/nginx/sites-available/default
 
 ADD requirements.txt /requirements.txt
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
 
-COPY python_mirror.py /usr/local/src/python_mirror
+COPY python_mirror.py /usr/local/src/python_mirror.py
 
 ADD start.sh /start.sh
 

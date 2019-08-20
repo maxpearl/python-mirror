@@ -13,8 +13,13 @@ DOMAIN="$(echo $URL | sed -e 's/[^/]*\/\/\([^@]*@\)\?\([^:/]*\).*/\2/')"
 cd /var/www/html
 mkdir ${DOMAIN}
 
+# Encoding for Click
+export LC_ALL=C.UTF-8
+export LANG=C.UTF-8
+
 # do the mirror in the background
-python /usr/local/src/python_mirror --url=${URL} --path=/var/www/html/${DOMAIN} &
+python3 /usr/local/src/python_mirror.py --url=${URL} --path=/var/www/html/${DOMAIN} \
+   --replace_urls_str=${REPLACE_URLS} &
 
 # start nginx
 nginx -g "daemon off;"

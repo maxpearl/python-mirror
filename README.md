@@ -1,4 +1,4 @@
-# Docker Container to mirror websites using pyhon_mirror
+# Docker Container to mirror websites using python_mirror
 
 This container is designed to provide a mirror of a specific site.
 
