@@ -8,3 +8,5 @@ docker run -d -p 80:80 -e URL=<url> pearlbear/python-mirror -e REPLACE_URLS=url_
 
 - URL: url to mirror
 - REPLACE_URLS - comma separated (no spaces) list of urls to replace with relative links (like http://www.example.com,http://example.com,https://www.example.com,http://example.com)
+
+The python_mirror.py script repository is [here](https://github.com/maxpearl/python_mirror)
