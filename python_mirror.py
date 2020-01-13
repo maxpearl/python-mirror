@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 import click
 
 @click.command()
-@click.option('--wait', default=0, help='Number of seconds to wait between requests. -1 for random', type=int) # Not implemented yet
+@click.option('--wait', default=0, help='Number of seconds to wait between requests. -1 for random', type=int)
 @click.option('--path', default='.', help="Local path to store files. NO trailing slash!")
 @click.option('--subdomains', is_flag=True) # not implemented yet
 @click.option('--url', required=True, type=str, help='URL of site to mirror')

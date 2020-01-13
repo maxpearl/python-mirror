@@ -19,7 +19,7 @@ export LANG=C.UTF-8
 
 # do the mirror in the background
 python3 /usr/local/src/python_mirror.py --url=${URL} --path=/var/www/html/${DOMAIN} \
-   --replace_urls_str=${REPLACE_URLS} &
+   --replace_urls_str=${REPLACE_URLS} --wait=${WAIT} &
 
 # start nginx
 nginx -g "daemon off;"
